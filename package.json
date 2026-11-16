@@ -1,0 +1,15 @@
+{
+  "name": "local-resource-map",
+  "version": "1.0.0",
+  "description": "Complete MERN Stack Community Resource Directory Web Application",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "server": "npm --prefix backend start",
+    "client": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "dev": "node start-dev.js"
+  },
+  "keywords": ["mern", "mongodb", "express", "react", "nodejs", "community-resource-map"],
+  "author": "",
+  "license": "MIT"
+}
