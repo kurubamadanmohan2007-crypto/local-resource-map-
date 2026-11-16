@@ -54,12 +54,16 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`\n======================================================`);
-  console.log(`  Local Resource Map - Backend Server Running`);
-  console.log(`  Port: http://localhost:${PORT}`);
-  console.log(`  API Health: http://localhost:${PORT}/api/health`);
-  console.log(`  API Resources: http://localhost:${PORT}/api/resources`);
-  console.log(`  API Stats: http://localhost:${PORT}/api/stats`);
-  console.log(`======================================================\n`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`\n======================================================`);
+    console.log(`  Local Resource Map - Backend Server Running`);
+    console.log(`  Port: http://localhost:${PORT}`);
+    console.log(`  API Health: http://localhost:${PORT}/api/health`);
+    console.log(`  API Resources: http://localhost:${PORT}/api/resources`);
+    console.log(`  API Stats: http://localhost:${PORT}/api/stats`);
+    console.log(`======================================================\n`);
+  });
+}
+
+module.exports = app;

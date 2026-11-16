@@ -6,10 +6,23 @@
     "install:all": "npm --prefix backend install && npm --prefix frontend install",
     "server": "npm --prefix backend start",
     "client": "npm --prefix frontend run dev",
-    "build": "npm --prefix frontend run build",
+    "build": "cd frontend && npm install && npm run build",
     "dev": "node start-dev.js"
   },
-  "keywords": ["mern", "mongodb", "express", "react", "nodejs", "community-resource-map"],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.1"
+  },
+  "keywords": [
+    "mern",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs",
+    "community-resource-map"
+  ],
   "author": "",
   "license": "MIT"
 }
